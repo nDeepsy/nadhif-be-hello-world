@@ -1,0 +1,11 @@
+{
+  "name": "be-hello-world",
+  "version": "1.0.0",
+  "description": "Project minimal Backend Hello World",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Nadhif Faiz Al Fahrezy",
+  "license": "MIT"
+}
