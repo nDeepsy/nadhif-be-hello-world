@@ -1,11 +1,17 @@
 {
-  "name": "be-hello-world",
+  "name": "nadhif-be-hello-world",
   "version": "1.0.0",
-  "description": "Project minimal Backend Hello World",
+  "description": "Backend API untuk media pembelajaran Informatika 3D SMPN 2 Tasikmalaya",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
+  "keywords": ["backend", "express", "api", "informatika"],
   "author": "Nadhif Faiz Al Fahrezy",
-  "license": "MIT"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3"
+  }
 }
