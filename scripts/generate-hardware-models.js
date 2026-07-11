@@ -46,9 +46,9 @@ const colorMap = {
   purple: [0.30, 0.20, 0.58, 1],
 };
 
-function align4(buffer) {
+function align4(buffer, paddingByte = 0) {
   const padding = (4 - (buffer.length % 4)) % 4;
-  return padding ? Buffer.concat([buffer, Buffer.alloc(padding)]) : buffer;
+  return padding ? Buffer.concat([buffer, Buffer.alloc(padding, paddingByte)]) : buffer;
 }
 
 function createGlb(name, parts) {
@@ -142,7 +142,7 @@ function createGlb(name, parts) {
     buffers: [{ byteLength: bin.length }],
   };
 
-  const json = align4(Buffer.from(JSON.stringify(gltf), "utf8"));
+  const json = align4(Buffer.from(JSON.stringify(gltf), "utf8"), 0x20);
   const totalLength = 12 + 8 + json.length + 8 + bin.length;
   const header = Buffer.alloc(12);
   header.writeUInt32LE(0x46546c67, 0);
