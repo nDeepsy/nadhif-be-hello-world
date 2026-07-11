@@ -2,31 +2,56 @@
   {
     "id": 1,
     "question": "Komponen apa yang berfungsi sebagai pusat pemrosesan instruksi pada komputer?",
-    "answers": ["Monitor", "Keyboard", "CPU", "Printer"],
+    "answers": [
+      "Monitor",
+      "Keyboard",
+      "CPU",
+      "Printer"
+    ],
     "correct": 2
   },
   {
     "id": 2,
     "question": "Perangkat apa yang digunakan untuk menyimpan data secara permanen?",
-    "answers": ["RAM", "SSD", "Monitor", "Mouse"],
+    "answers": [
+      "RAM",
+      "SSD",
+      "Monitor",
+      "Mouse"
+    ],
     "correct": 1
   },
   {
     "id": 3,
     "question": "RAM termasuk komponen yang membantu komputer dalam hal apa?",
-    "answers": ["Memori sementara", "Cetak dokumen", "Tampilan layar", "Input suara"],
+    "answers": [
+      "Memori sementara",
+      "Cetak dokumen",
+      "Tampilan layar",
+      "Input suara"
+    ],
     "correct": 0
   },
   {
     "id": 4,
     "question": "Format file yang umum dipakai untuk model 3D di web adalah...",
-    "answers": ["DOCX", "GLB", "XLSX", "MP3"],
+    "answers": [
+      "DOCX",
+      "GLB",
+      "XLSX",
+      "MP3"
+    ],
     "correct": 1
   },
   {
     "id": 5,
     "question": "API yang mengirim data berbentuk JSON biasanya digunakan untuk...",
-    "answers": ["Menghubungkan aplikasi dengan server", "Menghapus monitor", "Memperbesar layar", "Mengganti kabel listrik"],
+    "answers": [
+      "Menghubungkan aplikasi dengan server",
+      "Menghapus monitor",
+      "Memperbesar layar",
+      "Mengganti kabel listrik"
+    ],
     "correct": 0
   }
 ]

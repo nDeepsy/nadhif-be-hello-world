@@ -7,11 +7,17 @@
     "start": "node server.js",
     "dev": "node server.js"
   },
-  "keywords": ["backend", "express", "api", "informatika"],
+  "keywords": [
+    "backend",
+    "express",
+    "api",
+    "informatika"
+  ],
   "author": "Nadhif Faiz Al Fahrezy",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.3"
+    "express": "^4.18.3",
+    "multer": "^2.2.0"
   }
 }

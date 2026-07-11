@@ -4,27 +4,47 @@
     "title": "Input",
     "desc": "Perangkat untuk memasukkan data ke komputer.",
     "file": "input.glb",
-    "items": ["Keyboard", "Mouse", "Scanner"]
+    "modelUrl": "/uploads/models/input.glb",
+    "items": [
+      "Keyboard",
+      "Mouse",
+      "Scanner"
+    ]
   },
   {
     "id": 2,
     "title": "Proses",
     "desc": "Komponen yang mengolah instruksi dan data.",
     "file": "cpu.glb",
-    "items": ["CPU", "RAM", "Motherboard"]
+    "modelUrl": "/uploads/models/cpu.glb",
+    "items": [
+      "CPU",
+      "RAM",
+      "Motherboard"
+    ]
   },
   {
     "id": 3,
     "title": "Output",
     "desc": "Perangkat untuk menampilkan hasil pengolahan.",
     "file": "output.glb",
-    "items": ["Monitor", "Printer", "Speaker"]
+    "modelUrl": "/uploads/models/output.glb",
+    "items": [
+      "Monitor",
+      "Printer",
+      "Speaker"
+    ]
   },
   {
     "id": 4,
     "title": "Storage",
     "desc": "Media penyimpanan data jangka pendek dan panjang.",
     "file": "storage.glb",
-    "items": ["SSD", "Hard disk", "Flash drive"]
+    "modelUrl": "/uploads/models/storage.glb",
+    "items": [
+      "SSD",
+      "Hard disk",
+      "Flash drive"
+    ]
   }
 ]
