@@ -186,6 +186,32 @@ function pcSet() {
 
 createGlb("cpu", pcSet());
 
+createGlb("motherboard", [
+  { name: "motherboard", color: "board", translation: [0, 0, 0], scale: [2.10, 0.12, 1.42] },
+  { name: "cpu socket", color: "silver", translation: [-0.42, 0.11, 0.05], scale: [0.58, 0.08, 0.50] },
+  { name: "ram slots", color: "black", translation: [0.60, 0.16, -0.34], scale: [0.36, 0.16, 0.88] },
+  { name: "gpu slot", color: "black", translation: [0.20, 0.15, 0.47], scale: [1.25, 0.10, 0.12] },
+  { name: "circuit line 1", color: "circuit", translation: [-0.05, 0.20, -0.02], scale: [1.22, 0.03, 0.03] },
+  { name: "circuit line 2", color: "circuit", translation: [0.08, 0.20, -0.18], scale: [0.03, 0.03, 0.78] },
+]);
+
+createGlb("cpu-chip", [
+  { name: "cpu base", color: "silver", translation: [0, 0, 0], scale: [1.08, 0.16, 0.92] },
+  { name: "cpu core", color: "blue", translation: [0, 0.14, 0], scale: [0.72, 0.12, 0.56] },
+  { name: "pin row 1", color: "orange", translation: [-0.48, -0.12, 0], scale: [0.05, 0.10, 0.82] },
+  { name: "pin row 2", color: "orange", translation: [0.48, -0.12, 0], scale: [0.05, 0.10, 0.82] },
+  { name: "label", color: "white", translation: [0, 0.22, 0], scale: [0.38, 0.04, 0.16] },
+]);
+
+createGlb("ram", [
+  { name: "ram board", color: "green", translation: [0, 0, 0], scale: [1.75, 0.16, 0.42] },
+  { name: "chip 1", color: "black", translation: [-0.55, 0.14, 0], scale: [0.24, 0.10, 0.28] },
+  { name: "chip 2", color: "black", translation: [-0.18, 0.14, 0], scale: [0.24, 0.10, 0.28] },
+  { name: "chip 3", color: "black", translation: [0.18, 0.14, 0], scale: [0.24, 0.10, 0.28] },
+  { name: "chip 4", color: "black", translation: [0.55, 0.14, 0], scale: [0.24, 0.10, 0.28] },
+  { name: "gold connector", color: "orange", translation: [0, -0.12, 0.24], scale: [1.55, 0.06, 0.07] },
+]);
+
 createGlb("input", [
   { name: "keyboard base", color: "black", translation: [-0.20, -0.20, 0], scale: [2.20, 0.16, 0.72] },
   ...Array.from({ length: 10 }, (_, index) => ({
@@ -201,6 +227,37 @@ createGlb("input", [
   { name: "scanner glass", color: "screen", translation: [-0.35, 0.66, -0.12], scale: [1.24, 0.05, 0.42] },
 ]);
 
+createGlb("keyboard", [
+  { name: "keyboard base", color: "black", translation: [0, 0, 0], scale: [2.20, 0.16, 0.72] },
+  ...Array.from({ length: 12 }, (_, index) => ({
+    name: `key top ${index + 1}`,
+    color: index % 3 === 0 ? "blue" : "silver",
+    translation: [-0.98 + index * 0.18, 0.14, 0.18],
+    scale: [0.12, 0.08, 0.12],
+  })),
+  ...Array.from({ length: 10 }, (_, index) => ({
+    name: `key bottom ${index + 1}`,
+    color: "silver",
+    translation: [-0.80 + index * 0.18, 0.14, -0.12],
+    scale: [0.12, 0.08, 0.12],
+  })),
+]);
+
+createGlb("mouse", [
+  { name: "mouse body", color: "white", translation: [0, 0, 0], scale: [0.82, 0.28, 1.18] },
+  { name: "left button", color: "silver", translation: [-0.20, 0.20, 0.28], scale: [0.28, 0.08, 0.42] },
+  { name: "right button", color: "silver", translation: [0.20, 0.20, 0.28], scale: [0.28, 0.08, 0.42] },
+  { name: "scroll wheel", color: "black", translation: [0, 0.26, 0.36], scale: [0.10, 0.10, 0.18] },
+  { name: "sensor glow", color: "blue", translation: [0, -0.16, -0.36], scale: [0.24, 0.04, 0.20] },
+]);
+
+createGlb("scanner", [
+  { name: "scanner base", color: "charcoal", translation: [0, 0, 0], scale: [1.70, 0.28, 1.02] },
+  { name: "scanner glass", color: "screen", translation: [0, 0.20, 0], scale: [1.36, 0.06, 0.72] },
+  { name: "scanner lid", color: "white", translation: [0, 0.38, -0.06], scale: [1.54, 0.08, 0.84] },
+  { name: "scan line", color: "glow", translation: [0, 0.45, 0.16], scale: [1.18, 0.04, 0.05] },
+]);
+
 createGlb("output", [
   { name: "monitor body", color: "black", translation: [-0.95, 0.42, 0], scale: [1.35, 0.82, 0.10] },
   { name: "monitor screen", color: "screen", translation: [-0.95, 0.44, 0.06], scale: [1.12, 0.58, 0.04] },
@@ -214,6 +271,28 @@ createGlb("output", [
   { name: "speaker light right", color: "green", translation: [1.50, 0.05, 0.22], scale: [0.14, 0.14, 0.04] },
 ]);
 
+createGlb("monitor", [
+  { name: "monitor body", color: "black", translation: [0, 0.35, 0], scale: [1.55, 0.95, 0.10] },
+  { name: "monitor screen", color: "screen", translation: [0, 0.38, 0.06], scale: [1.32, 0.72, 0.04] },
+  { name: "screen glow", color: "glow", translation: [0, 0.40, 0.09], scale: [0.90, 0.38, 0.03] },
+  { name: "monitor stand", color: "charcoal", translation: [0, -0.28, 0], scale: [0.18, 0.42, 0.16] },
+  { name: "monitor base", color: "black", translation: [0, -0.55, 0], scale: [0.70, 0.10, 0.36] },
+]);
+
+createGlb("printer", [
+  { name: "printer body", color: "white", translation: [0, 0, 0], scale: [1.28, 0.52, 0.86] },
+  { name: "front panel", color: "silver", translation: [0, -0.06, 0.46], scale: [1.02, 0.22, 0.08] },
+  { name: "paper", color: "white", translation: [0, 0.32, 0.22], scale: [0.86, 0.05, 0.52] },
+  { name: "button", color: "green", translation: [0.48, 0.32, 0.48], scale: [0.12, 0.06, 0.12] },
+]);
+
+createGlb("speaker", [
+  { name: "speaker box", color: "black", translation: [0, 0, 0], scale: [0.72, 1.22, 0.62] },
+  { name: "woofer", color: "silver", translation: [0, -0.14, 0.34], scale: [0.42, 0.42, 0.05] },
+  { name: "tweeter", color: "silver", translation: [0, 0.36, 0.34], scale: [0.22, 0.22, 0.05] },
+  { name: "sound glow", color: "glow", translation: [0, -0.14, 0.40], scale: [0.25, 0.25, 0.04] },
+]);
+
 createGlb("storage", [
   { name: "ssd body", color: "silver", translation: [-0.65, 0.18, 0], scale: [1.30, 0.18, 0.74] },
   { name: "ssd label", color: "blue", translation: [-0.65, 0.29, 0], scale: [0.82, 0.05, 0.44] },
@@ -222,6 +301,24 @@ createGlb("storage", [
   { name: "disk plate", color: "silver", translation: [0.78, -0.02, 0], scale: [0.52, 0.05, 0.52] },
   { name: "flash drive", color: "black", translation: [-1.15, -0.48, 0.10], scale: [0.34, 0.18, 0.82] },
   { name: "flash connector", color: "silver", translation: [-1.15, -0.48, 0.62], scale: [0.24, 0.12, 0.24] },
+]);
+
+createGlb("ssd", [
+  { name: "ssd body", color: "silver", translation: [0, 0, 0], scale: [1.42, 0.18, 0.82] },
+  { name: "ssd label", color: "blue", translation: [0, 0.13, 0], scale: [0.88, 0.06, 0.46] },
+  { name: "ssd connector", color: "orange", translation: [0.82, 0, 0.46], scale: [0.34, 0.10, 0.08] },
+]);
+
+createGlb("hard-disk", [
+  { name: "hard disk body", color: "charcoal", translation: [0, 0, 0], scale: [1.30, 0.30, 0.96] },
+  { name: "disk plate", color: "silver", translation: [0, 0.18, 0], scale: [0.66, 0.06, 0.66] },
+  { name: "arm", color: "orange", translation: [0.30, 0.26, 0.18], scale: [0.52, 0.05, 0.08] },
+]);
+
+createGlb("flash-drive", [
+  { name: "flash body", color: "black", translation: [0, 0, 0], scale: [0.54, 0.24, 1.22] },
+  { name: "usb connector", color: "silver", translation: [0, 0, 0.78], scale: [0.38, 0.16, 0.34] },
+  { name: "label", color: "blue", translation: [0, 0.15, -0.18], scale: [0.38, 0.05, 0.42] },
 ]);
 
 console.log("Generated PC-themed GLB models in uploads/models");
